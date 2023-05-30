@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "W4d2Appication.customerFee",
+      "type": "java.lang.Double",
+      "description": "A description for 'w4d2.customerFee'"
+    }
+  ]
+}
