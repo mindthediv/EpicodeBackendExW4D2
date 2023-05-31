@@ -25,7 +25,7 @@ public class MenuBeanConfig {
     toppings[] hawaian = {toppings.Tomato, toppings.Cheese, toppings.Ham, toppings.Pineapple} ;
     toppings[] salami = {toppings.Tomato, toppings.Cheese, toppings.Salami} ;
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food margherita() {
         Pizza p =  new Pizza(false, margherita);
         p.setName("Pizza Margherita");
@@ -34,7 +34,7 @@ public class MenuBeanConfig {
         return p;
     }
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food hawaianPizza() {
         Pizza p =  new Pizza(false,hawaian );
         p.setName("Hawaian Pizza");
@@ -43,7 +43,7 @@ public class MenuBeanConfig {
         return p;
     }
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food salamiPizza() {
         Pizza p =  new Pizza(false,salami );
         p.setName("Salami Pizza");
@@ -53,7 +53,7 @@ public class MenuBeanConfig {
     }
     //Drinks
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food lemonade() {
         Drink lemonade = new Drink();
         lemonade.setName("Lemonade");
@@ -62,7 +62,7 @@ public class MenuBeanConfig {
         return lemonade;
     }
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food water() {
         Drink water = new Drink();
         water.setName("Water");
@@ -71,7 +71,7 @@ public class MenuBeanConfig {
         return water;
     }
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Food wine() {
         Drink wine = new Drink();
         wine.setName("Wine");
@@ -81,7 +81,7 @@ public class MenuBeanConfig {
     }
     //Merch
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Product shirt(){
         Merch shirt = new Merch();
         shirt.setName("Shirt");
@@ -89,7 +89,7 @@ public class MenuBeanConfig {
         return shirt;
     }
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     public Product mug(){
         Merch mug = new Merch();
         mug.setName("Mug");

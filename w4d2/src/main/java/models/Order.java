@@ -34,9 +34,15 @@ public class Order {
     }
     public void printOrder(){
         System.out.println("/|/|/|/|/|/|/|/|/|/|/|/|/");
+        System.out.println("Hour "+this.getAtHour()+":"+this.getAtMinute());
         System.out.println("Orders list:");
         for (Entry<Product, String> es : this.getList().entrySet()) {
-            System.out.println(es.getKey()+" Nb:"+es.getValue()+" Price "+es.getKey().getPrice()+"$"); 
+            if (es.getValue().equals("")){
+                System.out.println(es.getKey()); 
+            }else{
+                System.out.println(es.getKey()+" Nb:"+es.getValue()); 
+            }
+
         }
         System.out.println("+ customerFee = 1.00 x "+this.getCustomers()+" customers");
         System.out.println("Total ---------------");
